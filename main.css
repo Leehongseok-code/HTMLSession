@@ -1,5 +1,7 @@
 header{
+    /*flex속성 -> 창의 크기를 줄이거나 늘려도 요소가 아래로 밀려 내려가지 않도록 함*/
     display: flex;
+    /*flex사용 시 오른쪽 정렬, flex-middle은 가운데 정렬*/
     justify-content: flex-end;
     margin-bottom: 100px;
 }
@@ -12,6 +14,8 @@ header{
 }
 
 .header-icons button{
+    height: 28px;
+    position: relative;
     padding: 0;
     border: none;
     background: none;
@@ -30,7 +34,10 @@ header{
 }
 
 .header-icons button img {
+    /*이미지와 텍스트의 높이가 맞지 않는 경우를 방지하기 위한 속성*/
+    vertical-align:middle; 
     background-color: white;
+    top: 5px;
 }
 
 .header-icons {
@@ -49,6 +56,9 @@ article > h1{
 }
 
 .inputwithicon{
+    display: flex;
+    justify-content: center;
+
     border-radius: 30px;
     position: relative;
     margin-top: 50px;
@@ -71,7 +81,7 @@ article > h1{
     color: #5f6367;
     position: relative;
     left: 40px;
-    top: 5px;
+    top: 10px;
 }
 
 .second{
@@ -85,4 +95,19 @@ article > h1{
     padding: 0;
     border: none;
     background: none;
+}
+
+.footercontainer {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.footeritem button{
+    margin: 10px;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border-color: #f9f9fa;
+    background-color: #f9f9fa;;
 }
